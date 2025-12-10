@@ -2,8 +2,9 @@
 
 An Rsbuild plugin to run Stylelint checks during the compilation.
 
-The plugin has integrated [stylelint-webpack-plugin](https://www.npmjs.com/package/stylelint-webpack-plugin) internally.
+The plugin uses [stylelint-webpack-plugin](https://www.npmjs.com/package/stylelint-webpack-plugin) internally because it's [compatible with Rsbuild](https://rspack.rs/guide/compatibility/plugin) as a webpack plugin.
 
+> [!IMPORTANT]
 > We do not recommend using the `rsbuild-plugin-stylelint` plugin, as running Stylelint during the build process will significantly increase the build time. Instead, we recommend using a separate `lint` command to run Stylelint checks.
 
 <p>
@@ -21,6 +22,9 @@ Install:
 ```bash
 npm add rsbuild-plugin-stylelint -D
 ```
+
+> [!NOTE]
+> Stylelint must be installed separately for this plugin to work.
 
 Add plugin to your `rsbuild.config.ts`:
 
@@ -69,7 +73,11 @@ pluginStylelint({
 
 ### stylelintPluginOptions
 
+> [!CAUTION]
+> Stylelint will check **all files** in the context folder (by default, the root folder) that match the configured extensions, not just the files imported in your bundle.
+
 To modify the options of `stylelint-webpack-plugin`, please refer to [stylelint-webpack-plugin - README](https://github.com/webpack/stylelint-webpack-plugin#readme) to learn about available options.
+
 
 - **Type:** [Options](https://github.com/webpack/stylelint-webpack-plugin/blob/main/types.d.ts)
 - **Default:**
