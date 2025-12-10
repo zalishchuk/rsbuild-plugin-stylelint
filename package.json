@@ -1,6 +1,6 @@
 {
   "name": "rsbuild-plugin-stylelint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/zalishchuk/rsbuild-plugin-stylelint",
   "license": "MIT",
   "type": "module",
