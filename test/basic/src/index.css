@@ -1,0 +1,3 @@
+body {
+  color: red; /* Named color - should trigger stylelint error */
+}

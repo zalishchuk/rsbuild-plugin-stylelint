@@ -1,7 +1,7 @@
 {
-  "name": "rsbuild-plugin-example",
-  "version": "0.0.0",
-  "repository": "https://github.com/rspack-contrib/rsbuild-plugin-template",
+  "name": "rsbuild-plugin-stylelint",
+  "version": "0.0.1",
+  "repository": "https://github.com/zalishchuk/rsbuild-plugin-stylelint",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -40,7 +40,8 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@rsbuild/core": "1.x"
+    "@rsbuild/core": "1.x",
+    "stylelint": "^16.0.0"
   },
   "peerDependenciesMeta": {
     "@rsbuild/core": {
@@ -51,5 +52,8 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "stylelint-webpack-plugin": "^5.0.1"
   }
 }

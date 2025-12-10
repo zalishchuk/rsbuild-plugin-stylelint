@@ -1,1 +1,1 @@
-window.test = 1;
+import './index.css';

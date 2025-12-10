@@ -1,0 +1,6 @@
+$primary-color: white;
+
+.container {
+  color: $primary-color;
+  background: green; /* Named color - should trigger stylelint error */
+}
