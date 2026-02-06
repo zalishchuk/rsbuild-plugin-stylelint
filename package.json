@@ -41,7 +41,8 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@rsbuild/core": "1.x"
+    "@rsbuild/core": "1.x",
+    "stylelint": "^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0"
   },
   "peerDependenciesMeta": {
     "@rsbuild/core": {
