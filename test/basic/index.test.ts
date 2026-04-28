@@ -8,7 +8,7 @@ import { proxyConsole } from '../helper';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const EXPECTED_ERROR_MESSAGE = 'build failed';
-const STYLELINT_ERROR_NAMED_COLOR = 'Unexpected named color';
+const STYLELINT_RULE_NAMED_COLOR = 'color-named';
 
 test.describe('Stylelint Plugin', () => {
   test('should throw error when Stylelint errors exist', async () => {
@@ -24,7 +24,7 @@ test.describe('Stylelint Plugin', () => {
     await expect(rsbuild.build()).rejects.toThrowError(EXPECTED_ERROR_MESSAGE);
 
     const hasExpectedError = logs.some((log) =>
-      log.includes(STYLELINT_ERROR_NAMED_COLOR),
+      log.includes(STYLELINT_RULE_NAMED_COLOR),
     );
     expect(hasExpectedError).toBe(true);
 
@@ -127,7 +127,7 @@ test.describe('Stylelint Plugin', () => {
 
     const hasScssError = logs.some((log) => log.includes('styles.scss'));
     const hasNamedColorError = logs.some((log) =>
-      log.includes(STYLELINT_ERROR_NAMED_COLOR),
+      log.includes(STYLELINT_RULE_NAMED_COLOR),
     );
 
     expect(hasScssError).toBe(true);
