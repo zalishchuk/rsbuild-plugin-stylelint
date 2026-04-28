@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "baseUrl": "./",
+    "rootDir": "./src",
     "target": "ES2020",
     "lib": ["DOM", "ESNext"],
     "module": "Node16",
